@@ -1,8 +1,8 @@
 @import "./styles/base.scss";
 
 :root {
-  --primary-color: #55310c;
-  --fg-color: rgb(233, 22, 22);
+  --primary-color: #3bf7b5;
+  --fg-color: rgb(220, 196, 196);
   --duration: 2s;
   --easing: cubic-bezier(0.5, 0, 0.5, 1);
 }
@@ -32,18 +32,18 @@ ul {
 }
 
 .ball {
-  --primary-color: rgb(0, 255, 47);
+  --primary-color: rgb(4, 139, 25);
   height: 200px;
   width: 200px;
   border-radius: 50%;
   background-color: var(--primary-color);
   // animation: slide-right var(--duration) var(--easing) infinite;
-  margin: 1rem auto;
 
   /** --- Adding Transitions: For smooth transitioning from one state to another --- */
-  transition-property: background-color;
-  transition-duration: 2.5s;
-  transition-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
+  transition-property: background-color, transform;
+  transition-duration: 1.5s, 2.5s;
+  transition-timing-function: cubic-bezier(0.5, 0, 0.5, 1) linear;
+  transition-delay: 0s, 1.5s;
   /* ---
   &::before {
     --primary-color: rgb(51, 185, 51);
@@ -60,6 +60,7 @@ ul {
   &:hover {
     cursor: pointer;
     background-color: blue;
+    transform: translateX(1400px);
   }
 }
 
