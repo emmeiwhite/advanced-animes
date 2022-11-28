@@ -32,19 +32,19 @@ ul {
 }
 
 .ball {
-  --primary-color: rgb(4, 139, 25);
-  height: 200px;
-  width: 200px;
+  --primary-color: rgb(45, 1, 238);
+  height: 60px;
+  width: 60px;
   border-radius: 50%;
   background-color: var(--primary-color);
   // animation: slide-right var(--duration) var(--easing) infinite;
 
-  /** --- Adding Transitions: For smooth transitioning from one state to another --- */
+  /** --- Adding Transitions: For smooth transitioning from one state to another 
   transition-property: background-color, transform;
   transition-duration: 1.5s, 2.5s;
   transition-timing-function: cubic-bezier(0.5, 0, 0.5, 1) linear;
   transition-delay: 0s, 1.5s;
-  /* ---
+
   &::before {
     --primary-color: rgb(51, 185, 51);
     position: absolute;
@@ -55,15 +55,21 @@ ul {
     width: 100%;
     background-color: var(--primary-color);
   }
-  --- */
+
 
   &:hover {
     cursor: pointer;
     background-color: blue;
     transform: translateX(1400px);
   }
+    --- */
+
+  /** -- World of Animations -- */
+  animation-name: motion;
+  animation-duration: 4s;
 }
 
+/*
 @keyframes slide-right {
   from {
     transform: translateX(0);
@@ -71,5 +77,24 @@ ul {
 
   to {
     transform: translateX(50vw);
+  }
+}
+*/
+
+/** Move the circle in a complete square path using CSS3 animation */
+
+// we define our animations using CSS3 @keyframes
+
+@keyframes motion {
+  0% {
+    transform: none;
+  }
+
+  25% {
+    transform: translateX(40vw);
+  }
+
+  100% {
+    transform: translateX(40vw);
   }
 }
