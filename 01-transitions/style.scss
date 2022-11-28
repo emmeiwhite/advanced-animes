@@ -23,11 +23,10 @@ body {
   grid-template-rows: 1fr;
   grid-column-gap: 1rem;
   grid-template-areas: "input button";
-
   --color: var(--color-gray);
-  &:focus-within {
-    --color: var(--color-blue);
-  }
+  // &:focus-within {
+  //   --color: var(--color-blue);
+  // }
 }
 
 .ui-input {
@@ -37,8 +36,6 @@ body {
   border: 2px solid var(--color);
   border-radius: 0.25rem;
   outline: none;
-  transition-property: border;
-  transition-duration: 0.3s;
 }
 
 .ui-button {
@@ -50,16 +47,6 @@ body {
   border-radius: 0.25rem;
   height: var(--input-height);
   background-color: var(--color);
-  transition-property: background-color, opacity, transform;
-  transition-duration: 0.3s;
-
-  &:hover {
-    opacity: 0.7;
-  }
-
-  &:active {
-    transform: translateY(10%);
-  }
 }
 
 [data-show]:not([data-active]) {
