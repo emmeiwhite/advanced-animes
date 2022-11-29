@@ -29,6 +29,10 @@ body {
 
   // Add an animation here
 
+  animation-name: slide-up;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+
   --color: var(--color-gray);
   &:focus-within {
     --color: var(--color-blue);
@@ -72,6 +76,17 @@ body {
 
 @keyframes slide-up {
   // Add keyframes here
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 @keyframes shake {

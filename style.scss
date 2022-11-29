@@ -37,6 +37,7 @@ ul {
   width: 60px;
   border-radius: 50%;
   background-color: var(--primary-color);
+  margin-left: 40vw;
   // animation: slide-right var(--duration) var(--easing) infinite;
 
   /** --- Adding Transitions: For smooth transitioning from one state to another 
@@ -67,6 +68,7 @@ ul {
   /** -- World of Animations -- */
   animation-name: motion;
   animation-duration: 4s;
+  animation-fill-mode: both;
 }
 
 /*
@@ -87,7 +89,7 @@ ul {
 
 @keyframes motion {
   0% {
-    transform: none;
+    transform: translateX(-20vw);
   }
 
   25% {
@@ -103,6 +105,6 @@ ul {
   }
 
   100% {
-    transform: translate(none);
+    transform: translateY(-30vh);
   }
 }
