@@ -29,9 +29,11 @@ body {
 
   // Add an animation here
 
-  animation-name: shake;
+  // animation-name: shake;
+  animation-name: slide-up;
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
+  // animation-iteration-count: 5;
 
   --color: var(--color-gray);
   &:focus-within {
@@ -41,6 +43,11 @@ body {
   > .ui-input,
   > .ui-button {
     // Add an animation here
+    animation-name: slide-up;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    animation-fill-mode: both;
   }
 }
 
