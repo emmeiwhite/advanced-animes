@@ -154,22 +154,31 @@ ul {
   --duration: 1s;
   --primary-color: rgb(227, 42, 190);
   --stagger: 0.5s;
+  --interval: calc(var(--duration) - var(--stagger));
+
   height: 60px;
   width: 60px;
   border-radius: 50%;
   background-color: var(--primary-color);
   margin-left: 40vw;
+  // animation: move-right var(--duration) calc((var(--interval) * var(--i))) both;
+
   animation-name: move-right;
   animation-duration: var(--duration);
   animation-fill-mode: both;
+  animation-delay: calc((var(--interval) * var(--index)));
 
-  &.ball2 {
-    animation-delay: calc(var(--duration) - var(--stagger));
-  }
+  // animation-delay: calc(
+  //   var(--interval) - var(--i)
+  // ); // We have described this in the HTML
 
-  &.ball3 {
-    animation-delay: calc(var(--duration) * 2 - var(--stagger) * 2);
-  }
+  // &.ball2 {
+  //   animation-delay: calc(var(--duration) - var(--stagger));
+  // }
+
+  // &.ball3 {
+  //   animation-delay: calc(var(--duration) * 2 - var(--stagger) * 2);
+  // }
 }
 
 @keyframes move-right {
@@ -178,6 +187,6 @@ ul {
   }
 
   to {
-    transform: translateX(25vw);
+    transform: translateX(10vw);
   }
 }
